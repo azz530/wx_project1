@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#197CFD",
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

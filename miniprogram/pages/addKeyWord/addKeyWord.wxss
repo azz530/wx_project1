@@ -1,0 +1,126 @@
+page{
+  background-color: rgb(248, 248, 248);
+}
+
+.key{
+  /* border:1px solid red; */
+  padding:20rpx;
+  background-color: rgb(255, 255, 255);
+}
+
+.keybox1{
+  display: flex;
+  flex-direction: column;
+  /* border:1px solid red; */
+}
+
+.keybox2{
+  display: flex;
+  flex-direction: row;
+  /* border:1px solid red; */
+}
+
+.keyText{
+  display: flex;
+  flex-direction: column;
+  /* border:1px solid red; */
+}
+
+.keyTitle{
+  font-size: 32rpx;
+  color: rgb(51, 51, 51);
+  font-weight: 610;
+}
+
+.keydescribe{
+  color: rgb(61, 61, 61);
+  font-size: 28rpx;
+}
+
+.ButtonBox{
+  margin-left: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyButton{
+  width: 120rpx;
+  height: 60rpx;
+  background: rgb(94, 163, 253);
+  color: white;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  /* border:1px solid red; */
+}
+
+.itemCon{
+  margin-top: 20rpx;
+  display: flex;
+  height: 37rpx;
+  flex-direction: row;
+  background-color: rgb(249, 250, 251);
+  box-shadow: 1rpx 1rpx 5rpx 2rpx rgb(240, 240, 240) inset;
+  padding: 10rpx;
+  align-items: center;
+}
+
+.item{
+  margin-right: 30rpx;
+}
+
+.inputbox{
+  margin-top: 20rpx;
+  padding: 10rpx;
+  background-color: rgb(249, 250, 251);
+  box-shadow: 1rpx 1rpx 5rpx 2rpx rgb(240, 240, 240) inset;
+}
+
+.submitButton{
+  width: 120rpx;
+  height: 60rpx;
+  background: rgb(94, 163, 253);
+  color: white;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  /* border:1px solid red; */
+}
+
+.linebox{
+  background-color: rgb(241, 241, 241);
+  height: 4rpx;
+}
+
+.subscribe{
+  /* border:1px solid red; */
+  padding:20rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+}
+
+.subText{
+  display: flex;
+  flex-direction: column;
+  /* border:1px solid red; */
+}
+
+.SubTitle{
+  font-size: 29rpx;
+  color: rgb(51, 51, 51);
+  font-weight: 610;
+}
+
+.Subdescribe{
+  color: rgb(61, 61, 61);
+  font-size: 28rpx;
+}
+
+.switch{
+  /* border:1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+}

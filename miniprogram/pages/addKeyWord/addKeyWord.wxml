@@ -1,0 +1,53 @@
+<view>
+  <view class="key">
+    <view class="keybox1">
+      <block wx:if="{{!canSet}}">
+        <view class="keybox2">
+          <view class="keyText">
+            <view class="keyTitle">帮我留意</view>
+            <view class="keydescribe">添加关键词，打开订阅消息，发现可能是你在找的物品时会通知到你。多个关键词请使用中文顿号隔开！</view>
+          </view>
+          <view class="ButtonBox">
+            <button class="keyButton"  bindtap="TurnToCanSet">编辑</button>
+          </view>
+        </view>
+        <view class="itemCon">
+          <block wx:for="{{myKeyWord}}">
+            <view class="item">
+              {{item}}
+            </view>
+          </block>
+        </view>
+      </block>
+      <block wx:else>
+          <form bindsubmit="TurnToCanSet">
+            <view class="keybox2">
+              <view class="keyText">
+                <view class="keyTitle">帮我留意</view>
+                <view class="keydescribe">添加关键词，打开订阅消息，发现可能是你在找的物品时会通知到你。多个关键词请使用中文顿号隔开！</view>
+              </view>
+              <view class="ButtonBox">
+                <button class="submitButton"  form-type="submit">确认</button>
+              </view>
+            </view>
+            <input placeholder="输入关键词" class="inputbox" type="text" name="inputText"  value="{{defaultValue}}"/>
+          </form>
+      </block>
+    </view>
+  </view>
+  <view class="linebox"></view>
+  <view class="subscribe">
+    <view class="subText">
+      <view class="Subdescribe">如果需要长期通知，请勾选“总是保持以上选项，不再询问"，否则点击一次只通知一次。如果不需要通知，请清空关键词。</view>
+      
+    </view>
+    <!--
+    <view class="switch">
+      <view>
+        <switch bindchange="changeSwicth" disabled="{{switchDisabled}}" checked="{{switchChecked}}" color="rgb(94,163,253)"></switch>
+      </view>
+    </view>
+    -->
+
+  </view>
+</view>

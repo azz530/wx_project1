@@ -1,0 +1,65 @@
+<view>
+  <view class="head">
+    欢迎使用广西科技大学校园失物招领小程序!
+  </view>
+  <view class="head1">
+    本小程序只提供信息发布、查询、浏览服务。为了更好的维护网络环境，暂不支持启事信息下留言，请大家文明使用本小程序！。
+  </view>
+  <view class="Con">
+    <view class="p">
+      <text>●</text> 点击底部导航栏“首页”，进入失物招领启事浏览界面：
+    </view>
+    <image src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/HelpPic/shouyezhanshi.jpg"
+      mode="widthFix">
+    </image>
+  </view>
+  <view class="Con">
+    <view class="p">
+      <text>●</text>如果想找自己要找的物品，在搜索框里输入试试：
+    </view>
+    <image src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/HelpPic/jingquechazhao.jpg"
+      mode="widthFix">
+    </image>
+  </view>
+  <view class="Con">
+    <view class="p">
+      <text>●</text>如果想发布信息寻找自己的物品或者帮助别人找回物品，点击底部导航栏“发布”：
+    </view>
+    <image src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/HelpPic/fabushili.jpg"
+      mode="widthFix">
+    </image>
+    <view class="p"><text>●</text>请发布启事的同学必要的情况下留下联系方式以便寻找失物的同学能及时联系到你。</view>
+  </view>
+  <view class="Con">
+    <view class="p">
+      <text>●</text>如果想查看自己发布的启事，转步底部导航栏“我的”——“全部”/“未结案”/“已结案”：
+    </view>
+    <image
+      src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/HelpPic/Screenshot_20210526_120502.jpg"
+      mode="widthFix">
+    </image>
+    <image
+      src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/HelpPic/Screenshot_20210526_120516.jpg"
+      mode="widthFix">
+    </image>
+    <view class="p">
+      <text>●</text>长按该页面的某条启事，可以管理该条启事。
+    </view>
+  
+  </view>
+  <view class="Con">
+    <view class="p">
+      <text>●</text> 发布启事后想要知道今天有不有人可能找到了自己在找的？试试“我的”——“帮我留意”：
+    </view>
+    <image
+      src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/HelpPic/Screenshot_20210526_120537.jpg"
+      mode="widthFix">
+    </image>
+    <view class="p">
+      <text>●</text>在您允许的情况下，如果过去的二十四小时内有其它同学发的启事中存在可能是你在找的物品， 每天早上八点会提醒你查看消息，看看是否有你在找的。
+    </view>
+    <view class="p">
+      <text>●</text>提醒记录可以在“我的”——“@我的”中查看。记录更新时间为每日00:00。
+    </view>
+  </view>
+</view>

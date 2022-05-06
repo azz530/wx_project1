@@ -1,0 +1,141 @@
+page{
+  background-color: rgb(248,248,248);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+.userinfoBg{
+  height: 277.5rpx;
+  width: 750rpx;
+  background-color: rgb(25,124,253);
+}
+
+.logintext{
+  color: white;
+  font-size: 30rpx;
+}
+
+.userinfo {
+  width: 675rpx;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.avatarbox{
+  float: left;
+}
+
+.namebox{
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 1.5px solid white;
+}
+
+.userinfo-nickname {
+  color: white;
+  font-size: 36rpx;
+}
+
+.tuichu{
+  margin-top: 10rpx;
+  margin-left: 5rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.myPage{
+  width: 750rpx;
+  height: 835rpx;
+  background-color: rgb(248, 248, 248);
+  position: relative;
+}
+
+.toolbar{
+  width: 675rpx;
+  height: 150rpx;
+  margin:0 auto;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  top:-79rpx;
+  left: 37.5rpx;
+  right: 37.5rpx;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-in{
+  float: left;
+  flex:1;
+  font-size: 26rpx;
+  text-align: center;
+  color: rgb(104, 104, 104);
+}
+
+.toolUI{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.optionsBar{
+  width: 750rpx;
+  height: 610rpx;
+  margin: 0 auto;
+  position: absolute;
+  top:110rpx;
+}
+
+.myPageItem{
+  width: 750rpx;
+  height: 110rpx;
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  margin-top:6rpx;
+  color: rgb(104, 104, 104);
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+
+.optionUI{
+  width: 50rpx;
+  height: 50rpx;
+  position:absolute;
+  left: 35rpx;
+}
+
+.optiontext{
+  position:absolute;
+  left: 110rpx;
+  height: 95rpx;
+  line-height: 100rpx;
+}
+
+.enterUI{
+  width: 50rpx;
+  height: 50rpx;
+  position:absolute;
+  right: 20rpx;
+}
+

@@ -1,0 +1,70 @@
+<view>
+  <view class="Con">
+    <view class="Question"><text>●</text>“在这”是什么</view>
+    <view class="Answer">“嘿在这”，简称“在这”，是为广西科技大学学子开发的一个关于校园失物招领的信息查询平台，旨在帮助同学们更快地寻回自己心爱的宝贝。</view>
+  </view>
+
+
+  <view class="Con">
+    <view class="Question"><text>●</text>“在这”能干什么</view>
+    <view class="Answer">
+      “在这”小程序的主要功能如下:
+      <view class="item">
+        1.发布、浏览、查询失物招领启事；
+      </view>      <view class="item">
+        2.查看、管理自己发布的启事；
+      </view>      <view class="item">
+        3.查找用户在找物品并通知用户。
+      </view>
+      
+    </view>
+    <view class="Answer">
+      具体使用方法请查看“<text id="Help" bindtap="turnToHelp">使用帮助</text>”。
+    </view>
+  </view>
+
+  <view class="Con">
+    <view class="Question"><text>●</text>“在这”小团队</view>
+    <view class="Answer">
+      <view class="user">
+        <image
+          src="https://thirdwx.qlogo.cn/mmopen/vi_32/14klQsmQShONQDKrGibibGVq4z4EKsRuF1z84LK4jfPOTgcTBiak4QcN1EBXwjkslSOPdYbVUcRjoZyyUzQYvq2KA/132">
+        </image>
+        <view class="text">
+          OHTT_TTHO
+        </view>
+      </view>
+
+      <view class="user">
+        <image
+          src="https://thirdwx.qlogo.cn/mmopen/vi_32/MUkH0f0C7PmDibiaFFukNLtx3licicapHJgSrQLMDleicWuR1WwP0e622ueZoeJfPuDauqjwpTU1taNGEZuN1aIscOQ/132">
+        </image>
+        <view class="text">
+          KononoY
+        </view>
+      </view>
+
+      <view class="user">
+        <image
+          src="https://thirdwx.qlogo.cn/mmopen/vi_32/KT1FtRSZWKLfic44htMcECax8caibticdo1O0WABf896nGM8zcWwcm92XKYDU0gGIocYQ4r6iaM4lLMQamicd1XR1Ow/132">
+        </image>
+        <view class="text">
+          pl1454653152
+        </view>
+      </view>
+      
+      <view class="user">
+        <image
+          src="https://thirdwx.qlogo.cn/mmopen/vi_32/4NnSXuu1Gu8YxfZMaalq1CR5bG04FdicOp1QCR7LZjfYgjSia0ULIPfBrobMsxHAkUjLGf6kxXuibWhzxZtCU7ZUw/132">
+        </image>
+        <view class="text">
+          <view>xiao1596i</view>
+        </view>
+      </view>
+      <view class="Answer">
+     反馈意见或者建议，请联系团队人员。
+    </view>
+    </view>
+  </view>
+
+</view>

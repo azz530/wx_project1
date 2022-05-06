@@ -1,0 +1,25 @@
+.p{
+  width: 650rpx;
+  height: auto;
+  /*border: 1rpx springgreen solid;*/
+  margin-left: 50rpx;
+  text-indent: 68rpx;
+  font-size: 34rpx;
+  margin-bottom:40rpx;
+}
+
+.b{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+}
+
+#p1{
+  margin-top: 30rpx;
+}
+
+view text{
+color: #197CFD;
+
+}

@@ -1,0 +1,64 @@
+.Con{
+ /* border: solid 1rpx rgb(255, 0, 0);*/
+  width: 650rpx;
+  height: auto;
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+  border: solid 2rpx silver;
+  border-radius: 50rpx;
+  padding-left:5rpx;
+  padding-right: 5rpx;
+  padding-top:15rpx;
+  padding-bottom:25rpx;
+}
+
+.Question{
+ /* border: slateblue 1rpx solid;*/
+  font-size: 35rpx;
+  font-weight: bold;
+  border-bottom:  #cde9ff 1rpx solid;
+}
+
+.item{
+  text-indent: 70rpx;
+}
+
+.Answer{
+  /*border: rgb(217, 255, 0) 1rpx solid;*/
+  font-size: 35rpx;
+}
+image{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.user{
+  display: flex;
+  flex-direction: row;
+  margin-left: 70rpx;
+  margin-right: 70rpx;
+  margin-top: 10rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid rgb(228, 228, 228);
+}
+
+
+
+view text{
+  color: #197CFD;
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  }
+
+  #Help{
+    color: #197CFD;
+    margin-left: 0rpx;
+  }
+.text{
+    display: flex;
+    color: #8f8f8f;
+    font-size: 34rpx;
+    margin-left: 30rpx;
+    align-items: center;
+   justify-content: center;
+    }

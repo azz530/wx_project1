@@ -1,0 +1,91 @@
+<view class="container">
+  <view class="userinfoBg">
+    <view class="userinfo">
+      <block wx:if="{{!hasUserInfo}}">
+        <image class="userinfo-avatar" src="../../image/login.png" wx:if="{{canIUseGetUserProfile}}"
+          bindtap="getUserProfile">登录</image>
+        <view class="logintext" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">点击登录</view>
+      </block>
+      <block wx:else>
+        <view class="avatarbox">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </view>
+        <view class="namebox">
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <image class="tuichu" src="../../image/tuichu.png" bindtap="Exit"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="myPage">
+    <view class="toolbar">
+      <view class="toolbar-in">
+        <navigator url="../myCollection/myCollection?active=1&targetId=whole" open-type="navigate" hover-class="none">
+          <image class="toolUI" src="../../image/Unpublished.png" ></image>
+          <view>
+            全部
+          </view>
+        </navigator>
+      </view>
+      <view class="toolbar-in">
+        <navigator url="../myCollection/myCollection?active=2&targetId=notFound" open-type="navigate" hover-class="none">
+          <image class="toolUI" src="../../image/Nofound.png"></image>
+          <view>未结案</view>
+        </navigator>
+      </view>
+
+      <view class="toolbar-in">
+        <navigator url="../myCollection/myCollection?active=3&targetId=found" open-type="navigate" hover-class="none">
+          <image class="toolUI" src="../../image/Found.png"></image>
+          <view>
+            已结案
+          </view>
+        </navigator>
+      </view>
+      <view class="toolbar-in">
+        <navigator url="../Detail/Detail" open-type="navigate" hover-class="none">
+          <image class="toolUI" src="../../image/Notevaluated.png"></image>
+          <view>
+            @我的
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class="optionsBar">
+      <navigator url="../addKeyWord/addKeyWord">
+        <view class="myPageItem">
+          <image src="../../image/keyword.png" class="optionUI"></image>
+          <view class="optiontext">帮我留意</view>
+          <image src="../../image/enter.png" class="enterUI"></image>
+        </view>
+      </navigator>
+
+      <navigator url="../Help/Help">
+        <view class="myPageItem">
+          <image src="../../image/help.png" class="optionUI"></image>
+          <view class="optiontext">使用帮助</view>
+          <image src="../../image/enter.png" class="enterUI"></image>
+        </view>
+      </navigator>
+
+      
+      <navigator url="../privacy/privacy">
+        <view class="myPageItem">
+          <image src="../../image/policy.png" class="optionUI"></image>
+          <view class="optiontext">用户须知</view>
+          <image src="../../image/enter.png" class="enterUI"></image>
+        </view>
+      </navigator>
+
+      <navigator url="../about/about">
+        <view class="myPageItem">
+          <image src="../../image/about.png" class="optionUI"></image>
+          <view class="optiontext">关于在这</view>
+          <image src="../../image/enter.png" class="enterUI"></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- <button bindtap="subscribeNew"> 订阅消息</button>
+  <button bindtap="pubscribeNew"> fa消息</button> -->
+</view>

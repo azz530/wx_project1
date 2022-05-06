@@ -1,0 +1,260 @@
+page{
+  background-color: rgb(242,242,242);
+}
+
+
+.search{
+  background-color: rgb(25, 124, 253);
+  padding-bottom: 10rpx;
+  padding-top: 5rpx;
+  position:fixed;
+  width: 100%;
+}
+
+.temp{
+  width: 100%;
+  height: 90rpx;
+}
+
+.search-header {
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.inputandcancel{
+  flex: 4;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left:10rpx;
+}
+
+.search-input{
+  height: 100%;
+  flex: 10;
+  margin-left: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  color: #666;
+}
+
+.search-cancel{
+ /* flex: 1;*/
+  height: 50rpx;
+  width:90rpx;
+  display: flex;
+  align-items:center;
+  background-color: white;
+  padding-right: 10rpx;
+  position: relative;
+  left: 35rpx;
+  z-index: 1;
+}
+
+.search-btn::after{
+  border: none;
+}
+
+.search-cancel::after{
+  border: none;
+}
+
+.cancel-image{
+  width: 42rpx;
+  height:42rpx;
+}
+
+.search-btn{
+  background-color: white;
+  margin-right: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-image{
+  width: 65rpx;
+  height: 65rpx;
+}
+
+.itemCon{
+  width: 750rpx;
+  height:auto;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 15rpx;
+  flex-direction: column;
+  padding: 25rpx;
+  padding-top: 15rpx;
+  background-color: white;
+}
+
+.userProfile{
+  flex-direction: row;
+  width: 700rpx;
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  justify-content: flex-start;
+  padding-left: 10rpx;
+}
+
+.userPortrait{
+  display: flex;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.uNameAndInfo{
+  height: 80rpx;
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.uName{
+  color: rgb(88, 107, 143);
+  height: 40rpx;
+  font-size: 29rpx;
+  font-weight: 610;
+  line-height: 50rpx;
+}
+
+.dateInfo{
+  width: auto;
+  height: 40rpx;
+  align-items: center;
+  display: flex;
+  color: rgb(145, 145, 148);
+  font-size: 24rpx;
+  padding-top: 5rpx;
+}
+
+.typeAndArticle{
+  flex: 1;
+  width: auto;
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bluetypebox{
+  width:60rpx;
+  height: 60rpx;
+  border-radius: 50rpx 0 0 50rpx;
+  display: flex;
+  margin-right: -20rpx;
+  padding-left: 40rpx;
+  padding-right: 30rpx;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(86, 174, 244);
+}
+
+.redtypebox{
+  width:60rpx;
+  height: 60rpx;
+  border-radius: 50rpx 0 0 50rpx;
+  display: flex;
+  margin-right: -20rpx;
+  padding-left: 40rpx;
+  padding-right: 30rpx;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 64, 64);
+}
+
+.greentypebox{
+  width:60rpx;
+  height: 60rpx;
+  border-radius: 50rpx 0 0 50rpx;
+  display: flex;
+  margin-right: -20rpx;
+  padding-left: 40rpx;
+  padding-right: 30rpx;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(125, 196, 84);
+}
+
+
+.type{
+  color: white;
+  font-size: 30rpx;
+}
+
+.article{
+  flex: 2;
+  color: white;
+  border-radius: 10rpx;
+  background-color: #56AEF4;
+}
+
+.userNotice{
+  margin-top: 10rpx;
+  width: 690rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  left: 25rpx;
+  right: 25rpx;
+}
+
+.noticeText{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  padding-left: 7rpx;
+}
+
+.noticePic{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-top: 5rpx;
+  flex-direction: row;
+  margin-top: 5rpx;
+  margin-bottom: 10rpx;
+}
+
+.userPic{
+  margin:5rpx;
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 5px;
+}
+
+.data-loading {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  background-color: #eee;
+  text-align: center;
+  font-size: 18px;
+}
+
+.need{
+  color: red;
+}

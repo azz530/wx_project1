@@ -1,0 +1,100 @@
+<form bindsubmit="handleInputChange" bindreset="handleCancelSearch">
+  <view class="search">
+    <view class="search-header">
+      <view class="inputandcancel">
+        <input name="search" placeholder="搜索......" type="text" class="search-input"
+          bindconfirm="handleInputEnter"></input>
+        <button class="search-cancel" form-type="reset" hidden="{{cancelHidden}}">
+          <image class="cancel-image" src="../../image/guanbi.png"></image>
+        </button>
+      </view>
+      <button class="search-btn" form-type="submit">
+        <image class="search-image" src="../../image/sousuo.png"></image>
+      </button>
+    </view>
+  </view>
+</form>
+<view class="temp"></view>
+<view wx:if="{{showList}}">
+  <view wx:for="{{showList}}" wx:for-index="index">
+    <view class="itemCon">
+      <view class="userProfile">
+        <view class="userPortrait">
+          <image class="userinfo-avatar" src="{{item.uAvatar}}" mode="cover"></image>
+        </view>
+        <view class="uNameAndInfo">
+          <view class="uName">
+            <text>{{item.uName}}</text>
+          </view>
+          <view class="dateInfo">
+            <block
+              wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==today}}">
+              <text
+                class="date">今天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+            </block>
+            <block wx:else>
+              <block
+                wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==yesterday}}">
+                <text
+                  class="date">昨天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+              </block>
+              <block wx:else>
+                <block
+                  wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==dayBeforeYesterday}}">
+                  <text
+                    class="date">前天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                </block>
+                <block wx:else>
+                  <block wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]==dayBeforeYesterday[0]+dayBeforeYesterday[1]+dayBeforeYesterday[2]+dayBeforeYesterday[3]}}">
+                    <text class="date">{{item.Date[5]+item.Date[6]}}月{{item.Date[8]+item.Date[9]}}日 {{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                    </block>
+                    <block wx:else>
+                      <text class="date">{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]+item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                    </block>        
+                </block>
+              </block>
+            </block>
+          </view>
+        </view>
+        <view class="typeAndArticle">
+          <block wx:if="{{!item.Done}}">
+            <block wx:if="{{!item.isLost}}">
+              <view class="bluetypebox">
+                <block wx:if="{{item.Type=='拾得'}}">
+                  <text class="type">招领</text>
+                </block>
+              </view>
+            </block>
+            <block wx:else>
+              <view class="redtypebox">
+                <block wx:if="{{item.Type=='丢失'}}">
+                  <text class="type">寻物</text>
+                </block>
+              </view>
+            </block>
+          </block>
+          <block wx:else>
+            <view class="greentypebox"> 
+                <text class="type">结案</text>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="userNotice">
+        <view class="noticeText">
+          <text>{{item.Section}}</text>
+        </view>
+        <view class="noticePic" wx:if="{{item.PicNum}}">
+          <block wx:for="{{item.PicPath}}" wx:for-item="path" wx:for-index="ind">
+            <image class="userPic" bindtap="viewimage" id="{{ind}}" data-listid="{{index}}"
+              src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/{{path}}"
+              mode="aspectFill"></image>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='data-loading' hidden="{{loadingDataHidden}}">
+  数据加载中...
+</view>

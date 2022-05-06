@@ -1,0 +1,110 @@
+<view class="container">
+  <view class="replacedTopBar"></view>
+  <view class="topBar">
+    <view class="topBarItem {{isActive==1?'active':''}}" bindtap="showContents" id="whole">全部</view>
+    <view class="topBarItem {{isActive==2?'active':''}}" bindtap="showContents" id="notFound">未结案</view>
+    <view class="topBarItem {{isActive==3?'active':''}}" bindtap="showContents" id="found">已结案</view>
+  </view>
+  <scoll-view class="detailsAboutBar" scroll-y="true">
+    <view wx:if="{{myNoticeList}}">
+      <view wx:for="{{myNoticeList}}">
+        <view class="itemCon" bindlongtap="turnToEdit" data-id="{{item._id}}" data-index="{{index}}">
+          <view class="userNotice">
+            <view class="NoticeTitle">
+              <block wx:if="{{item.Done}}">
+                <view class="NoticeTitle-typeBlue">
+                  <text>【已结案】</text>
+                </view>
+                <view>
+                  <text>{{item.Type}}{{item.Article}}</text>
+                </view>
+              </block>
+              <block wx:else>
+                <view class="NoticeTitle-typeRed">
+                  <text>【未结案】</text>
+                </view>
+                <view>
+                  <text>{{item.Type}}{{item.Article}}</text>
+                </view>
+              </block>
+            </view>
+            <view class="ReleaseTime">
+              <text>发布时间：</text>
+              <block
+              wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==today}}">
+              <text
+                class="date">今天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+            </block>
+            <block wx:else>
+              <block
+                wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==yesterday}}">
+                <text
+                  class="date">昨天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+              </block>
+              <block wx:else>
+                <block
+                  wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==dayBeforeYesterday}}">
+                  <text
+                    class="date">前天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                </block>
+                <block wx:else>
+                  <block wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]==dayBeforeYesterday[0]+dayBeforeYesterday[1]+dayBeforeYesterday[2]+dayBeforeYesterday[3]}}">
+                    <text class="date">{{item.Date[5]+item.Date[6]}}月{{item.Date[8]+item.Date[9]}}日 {{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                    </block>
+                    <block wx:else>
+                      <text class="date">{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]+item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                    </block>        
+                </block>
+              </block>
+            </block>
+            </view>
+            <view class="ReleaseLocation">
+              <text>地点：</text>
+              <text>{{item.Place}}</text>
+            </view>
+            <view class="LostType">
+              <text>物品名称：</text>
+              <text>{{item.Article}}</text>
+            </view>
+
+            <view class="Contact">
+              <text>联系方式：</text>
+              <block wx:if="{{item.Contact}}">
+                <text>{{item.Contact}}</text>
+              </block>
+              <block wx:else>
+                <text>未留</text>
+              </block>
+            </view>
+            <view wx:if="{{item.PicNum}}">
+              <view class="noticePic">
+                <block wx:for="{{item.PicPath}}" wx:for-item="path" wx:for-index="ind">
+                  <image class="Pic" bindtap="viewimage" id="{{ind}}" data-listid="{{index}}"
+                    src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/{{path}}"
+                    mode="aspectFill"></image>
+                </block>
+              </view>
+            </view>
+          </view>
+          <block wx:if="{{canEdit}}">
+            <block wx:if="{{item._id==currentId}}">
+              <view class="endCon">
+                <button class="endCon-buttonDel" bindtap="deleteTheNotice" data-id="{{item._id}}"
+                  data-index="{{index}}">删除</button>
+                <block wx:if="{{!item.Done}}">
+                  <button class="endCon-buttonFound" bindtap="TurnTohasFound" data-id="{{item._id}}"
+                    data-index="{{index}}">已找到</button>
+                </block>
+                <button class="endCon-buttonCancel" bindtap="TurnToCantEdit">取消</button>
+              </view>
+            </block>
+          </block>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{!hasUserInfo || myNoticeList.length==0}}">
+    <view class="end"><image src="../../image/kong1.png">
+    </image><text>空空如也</text></view>
+  </block>
+  </scoll-view>
+</view>

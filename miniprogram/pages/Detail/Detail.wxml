@@ -1,0 +1,82 @@
+<view>
+  <block wx:if="{{recordArr.length>0}}">
+    <view class="head">疑似在找：共{{recordArr.length}}条记录</view>
+    <block wx:for="{{recordArr}}">
+      <view class="userint">
+        <view>
+          <view class="userProfile">
+            <view class="userPortrait">
+              <image class="userAvatar" src="{{item.uAvatar}}" mode="cover"></image>
+            </view>
+            <view class="uNameAndInfo">
+              <view class="uName">
+                <text>{{item.uName}}</text>
+              </view>
+              <view class="udate">
+                <block
+                  wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==today}}">
+                  <text
+                    class="date">今天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                </block>
+                <block wx:else>
+                  <block
+                    wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==yesterday}}">
+                    <text
+                      class="date">昨天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                  </block>
+                  <block wx:else>
+                    <block
+                      wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]==dayBeforeYesterday}}">
+                      <text
+                        class="date">前天{{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                    </block>
+                    <block wx:else>
+                      <block
+                        wx:if="{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]==dayBeforeYesterday[0]+dayBeforeYesterday[1]+dayBeforeYesterday[2]+dayBeforeYesterday[3]}}">
+                        <text class="date">{{item.Date[5]+item.Date[6]}}月{{item.Date[8]+item.Date[9]}}日 {{item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                      </block>
+                      <block wx:else>
+                        <text
+                          class="date">{{item.Date[0]+item.Date[1]+item.Date[2]+item.Date[3]+item.Date[4]+item.Date[5]+item.Date[6]+item.Date[7]+item.Date[8]+item.Date[9]+item.Date[10]+item.Date[11]+item.Date[12]+item.Date[13]+item.Date[14]+item.Date[15]}}</text>
+                      </block>
+                    </block>
+                  </block>
+                </block>
+              </view>
+            </view>
+          </view>
+          <view class="uPlace">
+            地点：{{item.Place}}
+          </view>
+          <view class="uArticle">
+            物品：{{item.Article}}
+          </view>
+          <view class="uType">
+            类型：
+            <block wx:if="{{item.Type=='丢失'}}">寻物启事
+            </block>
+            <block wx:else>招领启事
+            </block>
+          </view>
+          <view class="uSection">
+            陈述：{{item.Section}}
+          </view>
+        </view>
+        <view class="noticePic">
+          <block wx:if="{{item.PicNum}}">
+            <block wx:for="{{item.PicPath}}" wx:for-item="path" wx:for-index="ind">
+              <image class="userPic" bindtap="viewimage" id="{{ind}}" data-listid="{{index}}"
+                src="cloud://n11-306-7gpp87wucc40404a.6e31-n11-306-7gpp87wucc40404a-1305510331/{{path}}"
+                mode="aspectFill">
+              </image>
+            </block>
+          </block>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:if="{{!hasUserInfo || recordArr.length==0}}">
+    <view class="end"><image src="../../image/kong1.png">
+    </image><text>空空如也</text></view>
+  </block>
+</view>

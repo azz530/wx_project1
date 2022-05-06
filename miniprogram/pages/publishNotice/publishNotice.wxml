@@ -1,0 +1,55 @@
+<view class="page">
+  <form bindsubmit="submitNotice" bindreset="resetNotice">
+    <view class="box">
+      <view class="detail">
+        <view class="placeTitle">我在</view>
+        <input name="place" value="{{empty}}" type="text" class="inputplace"  placeholder="哪个地方..." />
+        <view class="inputline"></view>
+        <view class="lostArticle">
+          <radio-group name="noticeType">
+            <radio class="choice1" value="拾得" color="rgb(118, 166, 238)" bindtap="lostTurnToFound" checked="{{checked}}">拾得</radio>
+            <radio class="choice2" value="丢失" color="rgb(118, 166, 238)" bindtap="foundTurnToLost">
+              丢失</radio>
+          </radio-group>
+          <view>
+            <input name="article" value="{{empty}}" class="inputArticle"  placeholder="什么物品..." type="text" />
+            <view class="inputline"></view>
+          </view>
+        </view>
+      </view>
+      <view class="describeTitle">描述</view>
+      <view class="describe">
+        <textarea value="{{empty}}" name="section"  placeholder="其它想说的..." class="articleInfo"></textarea>
+      </view>
+      <view class="phone">
+        <view class="phoneTitle">联系方式</view>
+        <input class="phoneinput" name="contact" value="{{empty}}" type="text" maxlength="25"
+          placeholder="你的手机号/QQ..." />
+        <view class="inputline"></view>
+      </view>
+      <view class="addimage">
+        <view wx:if="{{tempPicPath.length}}" class="choosedPicCon">
+          <block wx:for="{{tempPicPath}}">
+            <view class="picCon2">
+              <image class="choosedPic" src="{{item}}" mode="aspectFill">
+              </image>
+              <image class="deleteIcon" id="{{index}}" src="../../image/cancel.png" bindtap="deleteThepic">
+              </image>
+            </view>
+          </block>
+        </view>
+
+        <block wx:if="{{tempPicPath.length<3}}">
+          <view class="addPic" bindtap="addPic">
+            <image src="../../image/addPhotos.png"></image>
+          </view>
+        </block>
+      </view>
+
+      <view class="buttonCon">
+        <button class="buttonRs" form-type="reset">重置</button>
+        <button class="button" form-type="submit">确定</button>
+      </view>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,51 @@
+.head{
+  width: 650rpx;
+  height: auto;
+  margin-left: 50rpx;
+  text-indent: 68rpx;
+  font-size: 34rpx;
+  margin-top: 25rpx;
+}
+
+.head1{
+  width: 650rpx;
+  height: auto;
+  margin-left: 50rpx;
+  text-indent: 68rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.Con{
+  width: 650rpx;
+  height: auto;
+  margin-left: 50rpx;
+  font-size: 34rpx;
+  margin-top: 35rpx;
+  display: flex;
+  flex-direction: column;
+  border: solid 2rpx silver;
+  border-radius: 50rpx;
+  padding-left:5rpx;
+  padding-right: 5rpx;
+  padding-top:15rpx;
+  padding-bottom:25rpx;
+  box-shadow: rgb(223, 223, 223) 1rpx 1rpx;
+  margin-bottom: 20rpx;
+}
+
+image{
+  width: 650rpx;
+  margin-bottom: 25rpx;
+  border: 1rpx solid  #bde0fc;
+}
+
+.p{
+  text-indent: 0rpx;
+}
+
+view text{
+  color: #197CFD;
+  font-size: 37rpx;
+  font-weight: bold;
+  }

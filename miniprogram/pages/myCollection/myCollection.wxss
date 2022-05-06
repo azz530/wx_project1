@@ -1,0 +1,155 @@
+@import "../browseNotice/browseNotice.wxss";
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.replacedTopBar{
+  height:8vh;
+  width: 100vw;
+}
+
+.topBar{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height:8vh;
+  width: 100vw;
+  align-items: center;
+  position: fixed;
+}
+
+.topBarItem{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: cornflowerblue; */
+  text-align: center;
+}
+
+.active{
+  border-bottom: 5rpx rgb(25, 124, 253) solid;
+}
+
+.detailsAboutBar{
+  width: 100vw;
+  height: 92vh;
+  display: flex;  
+  flex-direction: column;
+}
+
+.NoticeTitle{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  font-weight: 610;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6rpx;
+}
+
+.NoticeTitle-typeRed{
+  color: rgb(255, 64, 64);
+}
+
+.NoticeTitle-typeBlue{
+  color: rgb(86, 174, 244);
+}
+
+.ReleaseTime{
+  font-size: 29rpx;
+  margin-left: 16rpx;
+  margin-bottom: 4rpx;
+}
+
+.ReleaseLocation{
+  font-size: 29rpx;
+  margin-left: 16rpx;
+  margin-bottom: 4rpx;
+}
+
+.LostType{
+  font-size: 29rpx;
+  margin-left: 16rpx;
+  margin-bottom: 4rpx;
+}
+
+.Contact{
+  font-size: 29rpx;
+  margin-left: 16rpx;
+  margin-bottom: 4rpx;
+}
+
+.Pic {
+  margin: 10rpx;
+  margin-left: 14rpx;
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 5px;
+}
+
+.endCon{
+  margin-top: 20rpx;
+  border-top: 3rpx rgb(248, 248, 248) solid;
+  margin-left: 10rpx;
+  padding-top: 20rpx;
+  width:90vw ;
+  display: flex;
+  flex-direction: row;
+}
+
+.endCon-buttonDel{
+  width: 150rpx;
+  height: 60rpx;
+  background: rgb(255, 36, 36);
+  border-radius: 50rpx;
+  color: white;
+  text-align: center;
+  font-size: 33rpx;
+  line-height: 60rpx;
+}
+
+.endCon-buttonFound{
+  width: 170rpx;
+  height: 60rpx;
+  background: rgb(94, 163, 253);
+  border-radius: 50rpx;
+  color: white;
+  text-align: center;
+  font-size: 33rpx;
+  line-height: 60rpx;
+}
+
+.endCon-buttonCancel{
+  width: 150rpx;
+  height: 60rpx;
+  background: white;
+  border-radius: 50rpx;
+  border: 4rpx solid rgb(94, 163, 253);
+  color: rgb(94, 163, 253);
+  text-align: center;
+  font-size: 33rpx;
+  line-height: 53rpx;
+}
+
+.end{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+margin-top:30vh ;
+}
+
+.end image{
+width: 300rpx;
+height: 300rpx;
+}
+
+.end text{
+color: rgb(199, 199, 199);
+  }

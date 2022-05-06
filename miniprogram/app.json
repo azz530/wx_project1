@@ -1,0 +1,50 @@
+{
+  "pages": [ 
+    "pages/browseNotice/browseNotice",
+    "pages/index/index",
+    "pages/myCollection/myCollection",
+    "pages/publishNotice/publishNotice",
+    "pages/Help/Help",
+    "pages/addKeyWord/addKeyWord",
+    "pages/Detail/Detail",
+    "pages/privacy/privacy",
+    "pages/about/about"
+   
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#4d4d4d",
+    "selectedColor": "#027ef8",
+    "list": [
+      {
+        "pagePath": "pages/browseNotice/browseNotice",
+        "text": "首页",
+        "iconPath": "image/shouye1.png",
+        "selectedIconPath": "image/shouye.png"
+      },
+      {
+        "pagePath": "pages/publishNotice/publishNotice",
+        "text": "发布",
+        "iconPath": "image/Publish1.png",
+        "selectedIconPath": "image/Publish.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "image/wode1.png",
+        "selectedIconPath": "image/wode.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+
+  
+  "permission": {
+  }
+}
